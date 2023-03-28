@@ -1,0 +1,28 @@
+.navbar {
+    display: flex;
+    align-items: center;
+}
+.navbar-nav {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    padding: 0;
+    li {
+        list-style: none;
+    }
+
+    li a {
+        text-decoration: none;
+        padding: 5px 10px;
+        color: rgb(71, 193, 1);
+    }
+    li a:hover {
+        text-decoration: underline;
+        color: rgb(22, 167, 99);
+    }
+
+    li a:active {
+        text-decoration: underline;
+        color: rgb(140, 32, 133);
+    }
+}
