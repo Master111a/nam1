@@ -1,18 +1,12 @@
 import "./App.css";
-// import Todo from "./components/todo/Todo";
-// import Greet from "./components/Greet";
 import Header from "./components/header/Header";
-import Todo from "./components/todoapp/Todo";
-import TodoList from "./components/todoapp/TodoList";
+// import Todo from "./components/todo-state/Todo";
+import Todo from "./components/todo-reducer/Todo";
 function App() {
     return (
         <div className="App">
             <Header />
             <Todo />
-
-            {/* <TodoList /> */}
-
-            {/* <Todo />     */}
         </div>
     );
 }

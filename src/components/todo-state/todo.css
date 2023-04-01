@@ -1,0 +1,106 @@
+.todo-app {
+    height: 70vh;
+    width: 30%;
+    min-width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    background: rgba(255, 205, 205, 0.55);
+    border: 2px solid rgb(121, 186, 42);
+    padding: 20px;
+    border-radius: 5px;
+    overflow: hidden scroll;
+    margin-top: 30px;
+}
+.todo-app::-webkit-scrollbar {
+    width: 10px;
+    background-color: rgba(139, 111, 111, 0.2);
+}
+.todo-app h1 {
+    color: rgb(66, 20, 235);
+    font-size: 24px;
+}
+.todo-form {
+    display: flex;
+    justify-content: center;
+    min-width: 350px;
+    margin-top: 10px;
+}
+input[type="text"] {
+    width: 65%;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+}
+input[type="text"]:focus {
+    padding: 9px;
+    border: 1px solid #000;
+    caret-color: #fc7805;
+}
+.todo-app button {
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 0 5px;
+    cursor: pointer;
+    background-color: #edf4befd;
+    color: #2db654;
+}
+.todo-app button:hover {
+    background: #dce98bfd;
+}
+.todo-app button:active {
+    padding: 9px;
+    border: 1px solid #322323;
+}
+.todo-app .todo-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+.todo-app .todo-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 50px;
+    margin-top: 5px;
+    background-color: rgba(79, 73, 179, 0.3);
+    justify-content: space-between;
+    color: rgb(32, 0, 22);
+}
+.todo-app .sub-title {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    color: #df0404;
+}
+.todo-app .todo-item:first-child {
+    margin-top: 8px;
+}
+.todo-app .todo-item input[type="checkbox"] {
+    width: 10%;
+    height: 100%;
+    cursor: pointer;
+    outline: none;
+    margin-top: 5px;
+}
+input[type="checkbox"]:checked {
+    transform: scale(1.2);
+}
+.todo-app .todo-item .btn {
+    display: flex;
+    justify-content: center;
+}
+.todo-app .btn button {
+    padding: 5px;
+}
+.todo-app .btn button:active {
+    padding: 4px;
+}
+.todo-app .todo-item .todo-title {
+    flex: 1;
+}
