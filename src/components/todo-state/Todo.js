@@ -4,7 +4,6 @@ function Todo() {
     const [todo, setTodo] = useState("");
     const [todos, setTodos] = useState([]);
     const [editId, setEditId] = useState(0);
-
     const [isChecked, setIsChecked] = useState(false);
 
     const handleSubmit = (e) => {
