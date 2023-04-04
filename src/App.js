@@ -1,13 +1,15 @@
+import { createContext } from "react";
 import "./App.css";
 import Header from "./components/header/Header";
 // import Todo from "./components/todo-state/Todo";
 // import Todo from "./components/todo-comp/Todo";
-import Context from "./components/todo-reducer/Context";
+import Todo from "./components/todo-reducer/Todo";
+
 function App() {
     return (
         <div className="App">
             <Header />
-            <Context />
+            <Todo />
         </div>
     );
 }

@@ -15,7 +15,7 @@ function Header() {
     return (
         <header className={cx("wrapper")}>
             <div className={cx("inner")}>
-                <div className={cx('inner-nav')}>
+                <div className={cx("inner-nav")}>
                     <a href="#!" className={cx("logo")}>
                         <img src={logo} alt="logo" />
                     </a>

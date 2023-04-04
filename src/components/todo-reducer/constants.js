@@ -1,4 +1,5 @@
-export const SET_JOB = "set_job";
-export const ADD_JOB = "add_job";
-export const DELETE_JOB = "delete_job";
-export const EDIT_JOB = "edit_job";
+export const SET_TODO = "set_todo";
+export const ADD_TODO = "add_todo";
+export const DELETE_TODO = "delete_todo";
+export const EDIT_TODO = "edit_todo";
+export const CHECK_INPUT = "check_input";

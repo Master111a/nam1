@@ -1,26 +1,44 @@
-import { SET_JOB, ADD_JOB, DELETE_JOB, EDIT_JOB } from "./constants";
-
-export const setJob = (payload) => {
+import {
+    ADD_TODO,
+    CHECK_INPUT,
+    DELETE_TODO,
+    EDIT_TODO,
+    SET_TODO,
+} from "./constants";
+export const setTodo = (todo) => {
     return {
-        type: SET_JOB,
-        payload,
+        type: SET_TODO,
+        payload: todo,
     };
 };
-export const addJob = (payload) => {
+export const addTodo = (todo) => {
     return {
-        type: ADD_JOB,
-        payload,
+        type: ADD_TODO,
+        payload: {
+            id: Math.random(),
+            title: todo,
+            isCompleted: false,
+        },
     };
 };
-export const deleteJob = (payload) => {
+export const deleteTodo = (id) => {
     return {
-        type: DELETE_JOB,
-        payload,
+        type: DELETE_TODO,
+        payload: id,
     };
 };
-export const editJob = (payload) => {
+export const editTodo = (id) => {
     return {
-        type: EDIT_JOB,
-        payload,
+        type: EDIT_TODO,
+        payload: id,
+    };
+};
+export const checkInput = (id, checked) => {
+    return {
+        type: CHECK_INPUT,
+        payload: {
+            id: id,
+            checked: checked,
+        },
     };
 };
