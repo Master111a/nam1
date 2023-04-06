@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import { useTodo } from "./hooks";
 import { actions } from ".";
+import "./Todo.css";
 function TodoForm() {
     const [state, dispatch] = useTodo();
     const { todo, todos } = state;
@@ -12,11 +13,13 @@ function TodoForm() {
         ref.current.focus();
         console.log(state.editID);
     };
+
     return (
         <div>
-            <h3>Todo</h3>
-            <form>
+            <h3>Todo app</h3>
+            <form className="todo-form" onSubmit={handleSubmit}>
                 <input
+                    type="text"
                     ref={ref}
                     placeholder="Enter todo..."
                     value={state.todo}

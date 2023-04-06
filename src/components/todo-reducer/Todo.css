@@ -1,4 +1,4 @@
-.todo-app-comp {
+.todo-app-reducer {
     height: 70vh;
     width: 30%;
     min-width: 350px;
@@ -17,14 +17,15 @@
     overflow: hidden scroll;
     margin-top: 30px;
 }
-.todo-app-comp::-webkit-scrollbar {
+.todo-app-reducer::-webkit-scrollbar {
     width: 10px;
     background-color: rgba(139, 111, 111, 0.2);
 }
-.todo-app-comp h1 {
+.todo-app-reducer h3 {
     font-family: "Shadows Into Light", cursive;
     font-weight: 600;
     font-size: 30px;
+    text-align: center;
     background: linear-gradient(
         66deg,
         rgba(213, 126, 164, 1) 3%,
@@ -55,7 +56,7 @@ input[type="text"]:focus {
     border: 1px solid #000;
     caret-color: #fc7805;
 }
-.todo-app-comp button {
+.todo-app-reducer button {
     border: none;
     padding: 10px;
     border-radius: 10px;
@@ -64,21 +65,21 @@ input[type="text"]:focus {
     background-color: #edf4befd;
     color: #2db654;
 }
-.todo-app-comp button:hover {
+.todo-app-reducer button:hover {
     background: #dce98bfd;
 }
-.todo-app-comp button:active {
+.todo-app-reducer button:active {
     padding: 9px;
     border: 1px solid #322323;
     color: firebrick;
 }
-.todo-app-comp .todo-list {
+.todo-app-reducer .todo-list {
     list-style: none;
     margin: 0;
     padding: 0;
     width: 100%;
 }
-.todo-app-comp .todo-item {
+.todo-app-reducer .todo-item {
     display: flex;
     align-items: center;
     padding: 10px 20px;
@@ -88,7 +89,7 @@ input[type="text"]:focus {
     justify-content: space-between;
     color: rgb(32, 0, 22);
 }
-.todo-app-comp .sub-title {
+.todo-app-reducer .sub-title {
     margin-top: 10px;
     text-align: center;
     font-family: "Shadows Into Light", cursive;
@@ -105,10 +106,10 @@ input[type="text"]:focus {
     -webkit-background-clip: text;
     background-clip: text;
 }
-.todo-app-comp .todo-item:first-child {
+.todo-app-reducer .todo-item:first-child {
     margin-top: 8px;
 }
-.todo-app-comp .todo-item input[type="checkbox"] {
+.todo-app-reducer .todo-item input[type="checkbox"] {
     width: 10%;
     height: 100%;
     cursor: pointer;
@@ -118,16 +119,17 @@ input[type="text"]:focus {
 input[type="checkbox"]:checked {
     transform: scale(1.2);
 }
-.todo-app-comp .todo-item .btn {
+.todo-app-reducer .todo-item .btn {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    width: 15%;
 }
-.todo-app-comp .btn button {
+.todo-app-reducer .btn button {
     padding: 5px;
 }
-.todo-app-comp .btn button:active {
+.todo-app-reducer .btn button:active {
     padding: 4px;
 }
-.todo-app-comp .todo-item .todo-title {
+.todo-app-reducer .todo-item .todo-title {
     flex: 1;
 }
