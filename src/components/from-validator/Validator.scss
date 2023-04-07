@@ -1,11 +1,12 @@
 .Validator {
     background: linear-gradient(120deg, #3ca7ee, #9b408f);
-    // height: calc(100vh - 66px);
+    height: 100vh;
     overflow: hidden;
 }
 .container {
     margin: 0 auto;
     margin-top: 50px;
+    width: 50%;
     max-width: 650px;
     padding: 15px 15px 20px 15px;
     background: #fff;
@@ -36,6 +37,13 @@
         color: inherit;
         transition: 0.5s ease;
         -webkit-transition: 0.5s ease;
+    }
+    .change-form {
+        color: #3ca7ee;
+        cursor: pointer;
+    }
+    .change-form:active {
+        color: #9b408f;
     }
 }
 .item-form {

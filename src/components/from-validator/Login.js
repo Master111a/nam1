@@ -1,7 +1,8 @@
 import React from "react";
 import { HiOutlineMail } from "react-icons/hi";
 import { BsKey } from "react-icons/bs";
-function Login() {
+function Login({ handleChangeForm, userLogin, logIn }) {
+    const { logEmail, logPassword, setLogEmail, setLogPassword } = userLogin;
     return (
         <div className="login">
             <form className="login-form">
@@ -12,6 +13,8 @@ function Login() {
                         placeholder="Email đăng nhập"
                         autoComplete="false"
                         className="email"
+                        value={logEmail}
+                        onChange={(e) => setLogEmail(e.target.value)}
                     />
                 </div>
                 <div className="item-form">
@@ -21,10 +24,19 @@ function Login() {
                         placeholder="Mật khẩu"
                         autoComplete="false"
                         className="password"
+                        value={logPassword}
+                        onChange={(e) => setLogPassword(e.target.value)}
                     />
                 </div>
                 <div className="item-form">
-                    <input type="submit" value="Đăng nhập" className="btn" />
+                    <input
+                        type="submit"
+                        value="Đăng nhập"
+                        className="btn"
+                        onSubmit={(e) => {
+                            logIn(e, logEmail, logPassword);
+                        }}
+                    />
                 </div>
                 <div>
                     <a href="#!" className="forget-password">
@@ -33,7 +45,12 @@ function Login() {
                 </div>
                 <div>
                     <span>
-                        Bạn chưa có tài khoản? Đăng ký <a href="#!">tại đây</a>
+                        Bạn chưa có tài khoản? Đăng ký{" "}
+                        <span
+                            className="change-form"
+                            onClick={() => handleChangeForm()}>
+                            tại đây
+                        </span>
                     </span>
                 </div>
             </form>
