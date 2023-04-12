@@ -1,9 +1,9 @@
-.Validator {
+.validator {
     background: linear-gradient(120deg, #3ca7ee, #9b408f);
-    height: 100vh;
+    height: calc(100vh - 66px);
     overflow: hidden;
 }
-.container {
+.validator .wrapper-container {
     margin: 0 auto;
     margin-top: 50px;
     width: 50%;
@@ -50,7 +50,8 @@
     position: relative;
     margin: 10px 0;
 
-    input:not([type="submit"]) {
+    // input:not([type="submit"]),
+    input:not([type="button"]) {
         padding: 12px 20px 12px 40px;
         border-radius: 5px;
         border: 1px solid #d2d8d8;
@@ -78,7 +79,7 @@
         border-radius: 8px;
     }
 
-    input:not([type="submit"]):focus {
+    input:not([type="button"]):focus {
         border-color: #343642;
         box-shadow: 0 0 5px rgb(52 54 66 / 10%);
     }

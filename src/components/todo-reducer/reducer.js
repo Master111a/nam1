@@ -22,7 +22,7 @@ const reducer = (state, action) => {
             };
             break;
         case ADD_TODO:
-            if (state.todo != "") {
+            if (state.todo !== "") {
                 newState = {
                     ...state,
                     todos: [...state.todos, action.payload],

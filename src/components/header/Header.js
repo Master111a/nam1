@@ -7,8 +7,11 @@ import {
     faMagnifyingGlass,
     faSpinner,
 } from "@fortawesome/free-solid-svg-icons";
+import Tippy from "@tippyjs/react";
+import "tippy.js/dist/tippy.css";
 import styles from "./Header.module.scss";
 import classNames from "classnames/bind";
+
 const cx = classNames.bind(styles);
 
 function Header() {
@@ -30,9 +33,11 @@ function Header() {
                         className={cx("loading")}
                         icon={faSpinner}
                     />
-                    <button className={cx("search-btn")}>
-                        <FontAwesomeIcon icon={faMagnifyingGlass} />
-                    </button>
+                    <Tippy content="Tìm kiếm">
+                        <button className={cx("search-btn")}>
+                            <FontAwesomeIcon icon={faMagnifyingGlass} />
+                        </button>
+                    </Tippy>
                 </div>
                 <div className={cx("action")}>
                     <a className={cx("btn")} href="#!">

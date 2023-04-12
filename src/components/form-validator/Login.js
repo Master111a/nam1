@@ -30,10 +30,10 @@ function Login({ handleChangeForm, userLogin, logIn }) {
                 </div>
                 <div className="item-form">
                     <input
-                        type="submit"
+                        type="button"
                         value="Đăng nhập"
                         className="btn"
-                        onSubmit={(e) => {
+                        onClick={(e) => {
                             logIn(e, logEmail, logPassword);
                         }}
                     />

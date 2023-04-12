@@ -1,78 +1,86 @@
 import React from "react";
 import { HiKey, HiMail, HiPhone, HiUser } from "react-icons/hi";
 
-function Signup({ handleChangeForm, user, setUser, signUp }) {
-    const { setName, setPhone, setEmail, setPassword, setCfpassword } = setUser;
-    const { name, phone, email, password, cfpassword } = user;
+function Signup({ handleChangeForm, values, handleChange, signUp, errors }) {
     return (
-        <div className="Signup">
+        <div className="signup">
             <form className="signup-form">
                 <div className="item-form">
                     <HiUser className="icon" />
                     <input
                         type="text"
+                        name="name"
                         placeholder="Họ và tên"
                         autoComplete="false"
                         className="name"
-                        value={name}
-                        onChange={(e) => setName(e.target.value)}
+                        value={values.name}
+                        onChange={handleChange}
                     />
+                    {errors.name && <p>{errors.name}</p>}
                 </div>
                 <div className="item-form">
                     <HiPhone className="icon" />
                     <input
                         type="tel"
+                        name="phone"
                         placeholder="Số điện thoại"
                         autoComplete="false"
                         className="phone"
-                        value={phone}
-                        onChange={(e) => setPhone(e.target.value)}
+                        value={values.phone}
+                        onChange={handleChange}
                     />
+                    {errors.phone && <p>{errors.phone}</p>}
                 </div>
                 <div className="item-form">
                     <HiMail className="icon" />
                     <input
                         type="email"
+                        name="email"
                         placeholder="Email đăng ký"
                         autoComplete="false"
                         className="email"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
+                        value={values.email}
+                        onChange={handleChange}
                     />
+                    {errors.email && <p>{errors.email}</p>}
                 </div>
                 <div className="item-form">
                     <HiKey className="icon" />
                     <input
                         type="password"
+                        name="password"
                         placeholder="Mật khẩu"
                         autoComplete="false"
-                        className="empasswordail"
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}
+                        className="password"
+                        value={values.password}
+                        onChange={handleChange}
                     />
+                    {errors.password && <p>{errors.password}</p>}
                 </div>
                 <div className="item-form">
                     <HiKey className="icon" />
                     <input
                         type="password"
+                        name="cfpassword"
                         placeholder="Nhập lại mật khẩu"
                         autoComplete="false"
                         className="re-password"
-                        value={cfpassword}
-                        onChange={(e) => setCfpassword(e.target.value)}
+                        value={values.cfpassword}
+                        onChange={handleChange}
                     />
+                    {errors.cfpassword && <p>{errors.cfpassword}</p>}
                 </div>
                 <div className="item-form">
                     <input
-                        type="submit"
+                        type="button"
                         value="Đăng ký"
                         className="btn"
-                        onSubmit={() => signUp()}
+                        onClick={(e) => signUp(e)}
                     />
                 </div>
                 <div>
                     <span>
-                        Bạn đã có tài khoản? Đăng nhập{" "}
+                        Bạn đã có tài khoản? Đăng nhập
                         <span
                             className="change-form"
                             onClick={() => handleChangeForm()}>
