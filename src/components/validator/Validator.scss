@@ -50,10 +50,13 @@
         font-size: 12px;
         color: red;
     }
+    .text {
+        margin-top: 5px;
+    }
 }
 .login-form {
-    .forget-password {
-        margin-top: 8px;
+    .forget-password:hover {
+        color: #ea0000;
     }
 }
 .item-form {

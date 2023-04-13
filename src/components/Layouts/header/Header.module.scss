@@ -1,0 +1,36 @@
+.header {
+    display: flex;
+    align-items: center;
+    height: 100px;
+    font-size: 14px;
+    background-color: #f9f9f9;
+    .container {
+        display: flex;
+        align-items: center;
+        width: calc(100% - 30px);
+        max-width: 1140px;
+        padding: 0 12px;
+        margin: auto;
+    }
+    a {
+        color: #222;
+        text-decoration: none;
+    }
+    .header-logo .header-logo img {
+        overflow-clip-margin: content-box;
+        overflow: clip;
+    }
+    .header-hotline {
+    }
+}
+.header-hotline {
+    .hotline-item {
+        display: inline-flex;
+        align-items: center;
+        padding: 8px 16px 8px 8px;
+        background-color: #fff;
+        border-radius: 55px;
+        font-size: 12px;
+        transition: all 0.2s ease-in-out;
+    }
+}

@@ -80,12 +80,15 @@ function Login() {
                         onClick={handleSubmit}
                     />
                 </div>
-                <div>
-                    <a href="#!" className="forget-password">
-                        Quên mật khẩu
+                <div className="text">
+                    <a
+                        href="#!"
+                        className="forget-password"
+                        style={{ color: "" }}>
+                        Quên mật khẩu ?
                     </a>
                 </div>
-                <div>
+                <div className="text">
                     <span>
                         Bạn chưa có tài khoản? Đăng ký{" "}
                         <span

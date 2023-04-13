@@ -14,6 +14,7 @@ function Signup() {
         const errors = validation(values);
         if (Object.keys(errors).length === 0) {
             dispatch(actions.signUp(values));
+            dispatch(actions.inputValues(values.email, values.password));
             dispatch({ type: SET_DEFAULT });
             dispatch(actions.setForm(true));
         } else {
@@ -126,12 +127,15 @@ function Signup() {
                         onClick={handleSubmit}
                     />
                 </div>
-                <div>
+                <div className="text">
                     <span>
                         Bạn đã có tài khoản? Đăng nhập{" "}
                         <span
                             className="change-form"
-                            onClick={() => dispatch(actions.setForm(true))}>
+                            onClick={() => {
+                                dispatch(actions.setForm(true));
+                                dispatch({ type: SET_DEFAULT });
+                            }}>
                             tại đây
                         </span>
                     </span>

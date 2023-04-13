@@ -64,6 +64,11 @@ const reducer = (state, action) => {
                     password: "",
                     cfpassword: "",
                 },
+                logValues: {
+                    logEmail: "",
+                    logPassword: "",
+                },
+                errors: [],
             };
             break;
         case SET_FORM:
@@ -81,7 +86,7 @@ const reducer = (state, action) => {
         default:
             throw Error("invalid action");
     }
-    console.log(newState);
+
     return newState;
 };
 export { initialState };
